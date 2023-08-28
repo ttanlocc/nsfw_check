@@ -65,7 +65,7 @@ def classify(model, input_paths, image_dim=IMAGE_DIM, predict_args={}):
     """
     images, image_paths = load_images(input_paths, (image_dim, image_dim))
     probs = classify_nd(model, images, predict_args)
-    return dict(zip(image_paths, probs))
+    return dict(probs)
 
 
 def classify_nd(model, nd_images, predict_args={}):
